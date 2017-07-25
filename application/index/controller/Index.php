@@ -15,7 +15,7 @@ class Index
 
         //2,将排序后的三个参数拼接后使用sha1加密
         sort($source);
-        $checkSignature = sha1(import('',$source));
+        $checkSignature = sha1(implode('',$source));
         //3，将加密后的字符串与signature进行对比，判断该请求是否来自微信
         if($checkSignature == $signature){
             echo $echostr;exit();
