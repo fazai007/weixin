@@ -6,11 +6,11 @@ class Index
     public function index()
     {
         //1，将timestamp,nonce,token按字典序排序
-        $token = $_GET['token'];
+        $nonce = $_GET['nonce'];
         $timestamp = $_GET['timestamp'];
         $signature = $_GET['signature'];
         $echostr = $_GET['echostr'];
-        $nonce = 'wangzaixiaotiao';
+        $token = 'wangzaixiaotiao';
         $source = array($token,$timestamp,$nonce);
 
         //2,将排序后的三个参数拼接后使用sha1加密
